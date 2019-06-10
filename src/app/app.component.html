@@ -8,13 +8,52 @@
       </ion-header>
       <ion-content>
         <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item lines="none" routerDirection="'root'" routerLink="/home">
+              <ion-icon slot="start" name="home"></ion-icon>
               <ion-label>
-                {{p.title}}
+                Home
               </ion-label>
             </ion-item>
+
+            <ion-item text-wrap routerDirection="'root'">
+              <ion-grid>
+                <ion-row>
+                  <h3>Catogeries</h3>
+                </ion-row>
+                <ion-row>
+                  <ion-col *ngFor="let c of catogeries">
+                    <ion-chip outline="true" color="secondary">
+                      <ion-label>{{ c }}</ion-label>
+                    </ion-chip>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-item lines="none">
+                    <ion-button fill="clear" shape="round" color="#232f3e">
+                      See all Catogeries
+                    </ion-button>
+                  </ion-item>
+                </ion-row>
+              </ion-grid>
+            </ion-item>
+
+            <ion-item lines="none" class="center"> </ion-item>
+            <ion-row center>
+              <ion-col text-center>
+                <ion-button routerLink="/login" shape="round" color="dark"
+                  >Login</ion-button
+                >
+              </ion-col>
+            </ion-row>
+
+            <ion-row center>
+              <ion-col text-center>
+                <ion-button routerLink="/signup" shape="round" color="dark"
+                  >Signup</ion-button
+                >
+              </ion-col>
+            </ion-row>
           </ion-menu-toggle>
         </ion-list>
       </ion-content>

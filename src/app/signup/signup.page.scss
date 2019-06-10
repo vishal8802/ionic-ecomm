@@ -1,0 +1,22 @@
+.head {
+  background-color: #232f3e;
+  color: white;
+  margin-bottom: 20px;
+}
+.danger {
+  color: red;
+}
+
+.transparent {
+  border: none;
+  background: transparent;
+}
+
+.border-bottom {
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+}
+.container {
+  padding: 20px;
+}

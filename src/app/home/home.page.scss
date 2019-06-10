@@ -1,4 +1,43 @@
-.welcome-card ion-img {
-  max-height: 35vh;
-  overflow: hidden;
+.bord {
+  border: 1px black solid;
+}
+.head {
+  background-color: #232f3e !important;
+  padding-bottom: 10px;
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.search {
+  position: sticky;
+  top: 5px;
+  background: white;
+  border-radius: 50px;
+  text-align: center;
+
+  margin: 0 50px 0 50px;
+}
+.searchround {
+  border-radius: 50px;
+  border: none;
+}
+.search-btn {
+  color: white;
+  background: #232f3e;
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+  margin: 3px 0 3px 0;
+}
+
+.offers {
+  margin: 5px;
+}
+
+.border-u-d {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.center {
+  text-align: center;
 }
