@@ -5,16 +5,18 @@
     </ion-buttons>
     <ion-title>Category</ion-title>
   </ion-toolbar>
+
+  <ion-slides [options]="slideOpts">
+    <ion-slide *ngFor="let cat of categories">
+      <button padding (click)="load_selected_child(cat.parent)">
+        {{ cat.parent }}
+      </button>
+    </ion-slide>
+  </ion-slides>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{ item.title }}
-      <div class="item-note" slot="end">
-        {{ item.note }}
-      </div>
-    </ion-item>
+  <ion-list *ngFor="let items of current_parent">
+    <h4>{{ items }}</h4>
   </ion-list>
 </ion-content>
