@@ -8,15 +8,17 @@
 
   <ion-slides [options]="slideOpts">
     <ion-slide *ngFor="let cat of categories">
-      <button padding (click)="load_selected_child(cat.parent)">
-        {{ cat.parent }}
-      </button>
+      <ion-chip (click)="load_selected_child($event)">{{
+        cat.parent
+      }}</ion-chip>
     </ion-slide>
   </ion-slides>
 </ion-header>
 
 <ion-content>
   <ion-list *ngFor="let items of current_parent">
-    <h4>{{ items }}</h4>
+    <ion-item (click)="get_selected_category_products($event)">{{
+      items
+    }}</ion-item>
   </ion-list>
 </ion-content>

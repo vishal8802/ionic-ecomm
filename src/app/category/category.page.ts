@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-category",
@@ -6,10 +7,11 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./category.page.scss"]
 })
 export class CategoryPage implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
 
   categories = [
     {
+      id: 1,
       parent: "Electronics",
       childs: [
         "Laptops",
@@ -21,23 +23,50 @@ export class CategoryPage implements OnInit {
       ]
     },
     {
+      id: 2,
       parent: "Fashion",
       childs: ["Footwear", "Clothing", "Watches", "Eyewear"]
     },
     {
+      id: 3,
       parent: "Home & Furniture",
       childs: ["Beds", "Mattress", "Wardrobes", "Dressing Tables"]
+    },
+    {
+      id: 4,
+      parent: "Fashion",
+      childs: ["Footwear", "Clothing", "Watches", "Eyewear"]
+    },
+    {
+      id: 5,
+      parent: "Fashion",
+      childs: ["Footwear", "Clothing", "Watches", "Eyewear"]
+    },
+    {
+      id: 6,
+      parent: "Fashion",
+      childs: ["Footwear", "Clothing", "Watches", "Eyewear"]
+    },
+    {
+      id: 7,
+      parent: "Fashion",
+      childs: ["Footwear", "Clothing", "Watches", "Eyewear"]
     }
   ];
 
-  current_parent: any;
+  current_parent: any = this.categories[0].childs;
 
-  load_selected_child(parent: any) {
+  load_selected_child(event: any) {
     let x = this.categories.filter(item => {
-      return item.parent == parent;
+      return item.parent == event.target.textContent;
     });
-    console.log(x[0].childs);
     this.current_parent = x[0].childs;
+  }
+
+  get_selected_category_products(event: any) {
+    this.router.navigate(["product"], {
+      queryParams: { sub_category: event.target.textContent }
+    });
   }
 
   slideOpts = {

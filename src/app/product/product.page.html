@@ -1,0 +1,32 @@
+<ion-header>
+  <div class="head">
+    <div class="row" style="color: white">
+      <div class="col">
+        <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+      </div>
+      <div class="col">
+        <h4 class="center">{{ category }}</h4>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-padding-top">
+    <ion-row center *ngFor="let i of rows">
+      <ion-col (click)="show_details($event)">
+        <img src="https://dummyimage.com/120x120/471a47/fff" alt="" />
+        <h5>item</h5>
+        <small>Rs 3453</small>
+      </ion-col>
+      <ion-col (click)="show_details($event)">
+        <img src="https://dummyimage.com/120x120/471a47/fff" alt="" />
+        <h5>item</h5>
+        <small>Rs 3453</small>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

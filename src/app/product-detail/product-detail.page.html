@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+</ion-header>
+
+<ion-content>
+  <div class="container ion-padding-top">
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide *ngFor="let i of x">
+        <img
+          src="https://dummyimage.com/400x400/000/fff"
+          class="img-fluid"
+          alt="Responsive image"
+        />
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <section padding>
+    <h4>items name with short description | color | version</h4>
+    <small style="color: green">Get 30% off</small>
+    <h3>Rs 9999</h3>
+  </section>
+
+  <h5 padding class="center border-u-d">Share</h5>
+  <section padding class="border-u-d">
+    <h5>Select color</h5>
+    <button class="btn btn-sm">red</button>
+    <button class="btn btn-sm">red</button>
+    <button class="btn btn-sm">red</button>
+  </section>
+
+  <section padding class="border-u-d">
+    <small style="color: green">Offer</small>
+    <small style="color: green">Offer</small>
+    <small style="color: green">Offer</small>
+  </section>
+
+  <section padding class="border-u-d">
+    <h4>Details</h4>
+    <div padding>
+      <h6>Highlights</h6>
+      <small>Highlighted details</small><br />
+      <small>Highlighted details</small><br />
+      <small>Highlighted details</small><br />
+      <small style="color:blue">View all details</small>
+    </div>
+  </section>
+
+  <section padding class="border-u-d">
+    <h4>Reviews</h4>
+    <div padding>
+      <h5>Review 1</h5>
+      <h5>Review 1</h5>
+      <h5>Review 1</h5>
+      <h5>Review 1</h5>
+      <h5>Review 1</h5>
+    </div>
+  </section>
+
+  <section padding class="border-u-d">
+    <h4>Similar Products</h4>
+    <div padding>
+      <ion-grid>
+        <ion-row center>
+          <ion-col text-center>
+            <img src="https://dummyimage.com/100x100/471a47/fff" alt="" />
+            <h5>item</h5>
+            <small>Rs 3453</small>
+          </ion-col>
+          <ion-col>
+            <img src="https://dummyimage.com/100x100/471a47/fff" alt="" />
+            <h5>item</h5>
+            <small>Rs 3453</small>
+          </ion-col>
+        </ion-row>
+        <ion-row center>
+          <ion-col text-center>
+            <img src="https://dummyimage.com/100x100/471a47/fff" alt="" />
+            <h5>item</h5>
+            <small>Rs 3453</small>
+          </ion-col>
+          <ion-col>
+            <img src="https://dummyimage.com/100x100/471a47/fff" alt="" />
+            <h5>item</h5>
+            <small>Rs 3453</small>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <small class="center">View all</small>
+    </div>
+  </section>
+</ion-content>
