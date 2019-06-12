@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Checkout</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h4>Select an address</h4>
+  <div class="card">
+    <ion-radio-group>
+      <ion-item>
+        <div>
+          <h6><strong>Rahul Singh</strong></h6>
+          <small class="faded">13/D-block</small><br />
+          <small class="faded">Gurgaon</small><br />
+        </div>
+        <ion-radio slot="start" value="1" checked></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <div>
+          <h6><strong>Rahul Singh</strong></h6>
+          <small class="faded">13/D-block</small><br />
+          <small class="faded">Gurgaon</small><br />
+        </div>
+        <ion-radio slot="start" value="2"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <div>
+          <h6><strong>Rahul Singh</strong></h6>
+          <small class="faded">13/D-block</small><br />
+          <small class="faded">Gurgaon</small><br />
+        </div>
+        <ion-radio slot="start" value="3"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </div>
+
+  <button (click)="toPay()" padding class="btn btn-transparent">
+    Proceed to Pay
+  </button>
+</ion-content>

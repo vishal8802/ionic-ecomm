@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-home",
@@ -6,11 +7,15 @@ import { Component } from "@angular/core";
   styleUrls: ["home.page.scss"]
 })
 export class HomePage {
-  constructor() {}
+  constructor(private router: Router) {}
   slideOpts = {
     initialSlide: 1,
     speed: 400
   };
+
+  redirect() {
+    this.router.navigate(["cart"]);
+  }
 
   rows = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 }

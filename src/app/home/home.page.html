@@ -10,12 +10,18 @@
         <h4 class="center">SHOP</h4>
       </div>
       <div class="col">
-        <ion-icon name="person" style="padding: 20px;float:right;"></ion-icon>
+        <ion-icon
+          (click)="redirect()"
+          name="person"
+          style="padding: 20px;float:right;"
+        ></ion-icon>
       </div>
     </div>
     <section class="search">
       <input class="searchround" type="text" />
-      <button class="search-btn"><ion-icon name="search"></ion-icon></button>
+      <button class="search-btn">
+        <ion-icon name="search"></ion-icon>
+      </button>
     </section>
   </div>
 </ion-header>

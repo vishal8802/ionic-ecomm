@@ -1,12 +1,15 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>cart</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cart</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div padding>
-    <ion-item>
+    <ion-item lines="none">
       <ion-avatar slot="start">
         <img
           src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
@@ -14,9 +17,10 @@
       </ion-avatar>
       <ion-label>Item Avatar</ion-label>
       <small>Rs 777</small>
+      <ion-icon name="trash"></ion-icon>
     </ion-item>
 
-    <ion-item>
+    <ion-item lines="none">
       <ion-avatar slot="start">
         <img
           src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
@@ -24,9 +28,10 @@
       </ion-avatar>
       <ion-label>Item Avatar</ion-label>
       <small>Rs 777</small>
+      <ion-icon name="trash"></ion-icon>
     </ion-item>
 
-    <ion-item>
+    <ion-item lines="none">
       <ion-avatar slot="start">
         <img
           src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
@@ -34,9 +39,10 @@
       </ion-avatar>
       <ion-label>Item Avatar</ion-label>
       <small>Rs 777</small>
+      <ion-icon name="trash"></ion-icon>
     </ion-item>
 
-    <ion-item>
+    <ion-item lines="none">
       <ion-avatar slot="start">
         <img
           src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
@@ -44,10 +50,23 @@
       </ion-avatar>
       <ion-label>Item Avatar</ion-label>
       <small>Rs 777</small>
+      <ion-icon name="trash"></ion-icon>
     </ion-item>
+    <hr />
+  </div>
+
+  <div class="bill border-u-d" padding>
+    <p class="smaller">Cart Price <small class="float-right">8778</small></p>
+    <p class="smaller">
+      Discount <small class="float-right" style="color: green">-456</small>
+    </p>
+    <p class="smaller">
+      Delivery Charges <small style="color:red" class="float-right">+48</small>
+    </p>
+    <h6>Cart Total<small class="float-right">4568</small></h6>
   </div>
 
   <div padding>
-    <h5 padding>Proceed to Buy</h5>
+    <h5 (click)="gotoCheckOut()" padding>Proceed to Checkout</h5>
   </div>
 </ion-content>
