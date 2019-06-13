@@ -8,10 +8,11 @@
   <h4>Select a Payment Method</h4>
   <div class="card">
     <ion-radio-group>
-      <ion-item>
+      <ion-item (click)="Expand()">
         <h6 class="small">Credit Card</h6>
 
         <ion-radio slot="start" value="4" checked></ion-radio>
+        <div #expand class="expand" style="color: red"></div>
       </ion-item>
 
       <ion-item>
